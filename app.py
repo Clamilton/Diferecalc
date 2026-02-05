@@ -76,7 +76,7 @@ with st.container(border=True):
     with col1:
         valor_texto = st.text_input(
             "Valor Total do Crédito (R$)", 
-            value="1.126.260,90",
+            value="",
             help="Ex: 1.000,00"
         )
         valor_input = converter_input_br(valor_texto)
@@ -116,4 +116,5 @@ if st.button("Calcular Distribuição (Alternar Padrão)", type="primary"):
     if abs(dif) < 0.01:
         st.caption(f"Validação Matemática: R$ {formatar_brl(total_geral)} (Perfeito)")
     else:
+
         st.error(f"Erro de arredondamento: {dif}")
